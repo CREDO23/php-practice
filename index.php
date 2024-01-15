@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This is the entry point for the application
+ */
+
 require 'functions.php';
 
 require 'database.php';

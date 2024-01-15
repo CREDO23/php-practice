@@ -1,4 +1,12 @@
 <?php
+
+
+/**
+ * This file handles the routing.
+ * Check the path and load a corresponding controller.
+ */
+
+
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes = [

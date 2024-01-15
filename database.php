@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * The definition of the database class
+ */
+
 class Database {
     public $connection;
 
