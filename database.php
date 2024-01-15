@@ -3,8 +3,13 @@
 class Database {
     public $connection;
 
-    public function __construct($dsn){
-        $this->connection = new PDO($dsn,"root");
+    public function __construct($config, $user = 'root', $password = ''){
+
+        $dns = 'mysql:' . http_build_query($config,'',';');
+
+        $this->connection = new PDO($dns,$user,$password, [
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        ]);
     }
 
     public function query($query){
@@ -12,6 +17,6 @@ class Database {
 
         $statment->execute();
 
-        return $statment->fetchAll(PDO::FETCH_ASSOC);
+        return $statment;
     }
 }

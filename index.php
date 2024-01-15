@@ -8,11 +8,13 @@ require 'database.php';
 
 // require "router.php";
 
-$dsn = "mysql:host=localhost;port=3306;dbname=myapp;charset=utf8mb4";
 
-$db = new Database($dsn);
+$config = require("config.php");
 
-$posts = $db->query("SELECT * FROM posts");
+$db = new Database($config['database']);
+
+$posts = $db->query("SELECT * FROM posts")->fetchAll();
+
 
 foreach ($posts as $post) {
     echo "<li>". $post["title"] ."</li>";
