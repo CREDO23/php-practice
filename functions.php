@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * This file holds helper functions
+ */
 function dd($value)
 {
 

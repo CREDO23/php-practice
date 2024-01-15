@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This file holds the configuration variables.
+ */
+
 return [
     'database' => [
         'host' => 'localhost',
