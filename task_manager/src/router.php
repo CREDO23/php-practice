@@ -1,11 +1,11 @@
 <?php
 
-require "helpers.php";
 
 $controllers = [
-    '/' => 'controllers/all.php',
+    '/tasks' => 'controllers/all.php',
     '/todo' => 'controllers/todo.php',
     '/completed' => 'controllers/completed.php',
+    '/' => 'controllers/auth.php',
 ];
 
 /**

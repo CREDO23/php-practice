@@ -8,7 +8,11 @@
  * @param value : The value to dump
  */
 function dd ($value){
+
+    echo "<pre>";
     var_dump($value);
+    echo "</pre>";
+    
     die();
 }
 

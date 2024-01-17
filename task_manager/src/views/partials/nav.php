@@ -13,7 +13,7 @@ $menus = ['/' => 'All tasks', '/todo' => 'To do', '/completed' => 'Completed'];
     <!-- <button class="bg-white border border-transparent transition-all hover:bg-blue-700 hover:text-white hover:border-white cursor-pointer text-blue-700 px-5 py-1 rounded-md grid items-center">
         Connecxion
     </button> -->
-    <div class="w-10 h-10 bg-white rounded-full text-xl text-bold text-blue-700 flex items-center justify-center">
+    <div class="w-10 cursor-pointer h-10 bg-white rounded-full text-xl text-bold text-blue-700 flex items-center justify-center">
         T
     </div>
 </nav>
