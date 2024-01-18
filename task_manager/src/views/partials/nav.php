@@ -1,5 +1,5 @@
 <?php
-$menus = ['/' => 'All tasks', '/todo' => 'To do', '/completed' => 'Completed'];
+$menus = ['/tasks' => 'All tasks', '/todo' => 'To do', '/completed' => 'Completed'];
 ?>
 
 <nav class="h-16 bg-blue-700 text-white w-full px-10 py-2 flex items-center justify-between">
