@@ -3,10 +3,10 @@
 <?php require "partials/nav.php" ?>
 
 <main class="h-[calc(100vh-9rem)] p-10 border overflow-auto flex flex-wrap gap-10">
-    <?php for ($i = 0; $i < 10; $i++) : ?>
+    <?php foreach ($tasks as $task) : ?>
         <div class="w-96 h-44 p-3 border rounded-md shrink-0 flex flex-col justify-between">
-            <h3 class="font-semibold">Task title</h3>
-            <p class="w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, incidunt? Explicabo cupiditate ducimus vitae impedit, ut cum.</p>
+            <h3 class="font-semibold"><?=$task['title']?></h3>
+            <p class="w-full text-sm grow "><?=$task['description']?></p>
             <div class="w-full flex justify-between items-center">
                 <input class="h-6 w-6 " type="checkbox" name="" id="">
                 <div class="flex gap-3">
@@ -16,7 +16,7 @@
             </div>
 
         </div>
-    <?php endfor ?>
+    <?php endforeach ?>
 </main>
 
 <?php require "partials/footer.php" ?>
