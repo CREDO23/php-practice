@@ -2,19 +2,21 @@
 
 
 $controllers = [
-    '/tasks' => 'controllers/all.php',
-    '/todo' => 'controllers/todo.php',
-    '/completed' => 'controllers/completed.php',
-    '/' => 'controllers/auth.php',
+    '/tasks' => 'controllers/tasks-all.php',
+    '/task/create' => 'controllers/task-create.php',
+    '/tasks/create' => 'controllers/tasks-create.php',
+    '/tasks/todo' => 'controllers/tasks-todo.php',
+    '/tasks/completed' => 'controllers/tasks-completed.php',
+    '/auth' => 'controllers/auth.php',
 ];
 
 /**
  * uriToController - A function that look for the controller depending on the current uri
  * 
- * @param uri : The server uri
- * @param controllers : The controllers
+ * @param string : The server uri
+ * @param array : The controllers
  */
-function uriToCOntroller($uri, $controllers)
+function uriToController($uri, $controllers)
 {
     $path = parse_url($uri)['path'];
 
@@ -25,4 +27,4 @@ function uriToCOntroller($uri, $controllers)
     }
 };
 
-uriToCOntroller($_SERVER['REQUEST_URI'], $controllers);
+uriToController($_SERVER['REQUEST_URI'], $controllers);

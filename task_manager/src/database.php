@@ -16,7 +16,7 @@ class Database {
         ] );
     }
 
-    function query($query,$params)
+    function query($query,$params=[])
     {
         $statement = $this->connexion->prepare($query);
 
