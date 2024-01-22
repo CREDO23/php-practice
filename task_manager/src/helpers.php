@@ -5,7 +5,7 @@
  * 
  * A function that helps to dump and stop the process.
  * 
- * @param value : The value to dump
+ * @param mixed : The value to dump
  */
 function dd ($value){
 
@@ -19,7 +19,7 @@ function dd ($value){
 /**
  * abort - Abort a given request with a http status code
  * 
- * @param code : The status code to abort with
+ * @param number : The status code to abort with
  */
 function abort ($code = 404){
 
@@ -29,4 +29,16 @@ function abort ($code = 404){
 
     die();
 
+}
+
+function base_path($path){
+    return BASE_PATH.$path;
+}
+
+function config($path){
+    return BASE_PATH . 'configs/'. $path;
+}
+
+function view($path){
+    return BASE_PATH . 'views/'. $path;
 }

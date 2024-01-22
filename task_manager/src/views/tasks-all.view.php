@@ -10,7 +10,7 @@
 
     <div class="w-full h-[calc(100vh-4rem)]   overflow-auto flex flex-wrap gap-10">
         <?php foreach ($tasks as $task) : ?>
-            <div class="w-80 h-44 p-3 bg-white rounded-md shrink-0 flex flex-col justify-between">
+            <div class="w-80 h-44 p-4 bg-white rounded-md shrink-0 flex flex-col justify-between">
                 <h3 class="font-semibold"><?= $task['title'] ?></h3>
                 <p class="w-full text-sm grow "><?= $task['description'] ?></p>
                 <div class="w-full flex justify-between items-center">

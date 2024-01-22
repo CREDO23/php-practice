@@ -1,3 +1,3 @@
 <?php
 
-require "src/views/auth.view.php";
+require view("auth.view.php");
