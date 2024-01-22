@@ -1,10 +1,15 @@
 <?php
 
+use core\Validator;
+use core\Database;
+
+$db_config = require config("database.php");
+
+$errors = [];
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $db_config = require config("database.php");
 
-    $errors = [];
 
     if (Validator::string($_POST['title'], 6, 20)) {
         $errors['title'] = 'The title must be betwen 6 and 20 characters long';

@@ -1,5 +1,7 @@
 <?php
 
+use core\Database;
+
 $db_config = require config("database.php");
 
 // A new connection to the database

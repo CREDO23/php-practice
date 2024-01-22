@@ -1,11 +1,11 @@
 <?php
 
 /**
- * dd - Dump and die
+ * Dump and die
  * 
  * A function that helps to dump and stop the process.
  * 
- * @param mixed : The value to dump
+ * @param mixed $value: The value to dump
  */
 function dd ($value){
 
@@ -19,7 +19,7 @@ function dd ($value){
 /**
  * abort - Abort a given request with a http status code
  * 
- * @param number : The status code to abort with
+ * @param number $code: The status code to abort with
  */
 function abort ($code = 404){
 
@@ -31,14 +31,49 @@ function abort ($code = 404){
 
 }
 
+/**
+ * A function that appends a path to the base path
+ * 
+ * @param string $path The path to append
+ * 
+ * @return string A full path.
+ */
 function base_path($path){
     return BASE_PATH.$path;
 }
 
+/**
+ * A function that appends a path to the configuration's
+ * folder path.
+ * 
+ * @param string $path The path to append
+ * 
+ * @return string A full path of the config.
+ */
 function config($path){
     return BASE_PATH . 'configs/'. $path;
 }
 
+/**
+ * A function that appends a path to the view's
+ * folder path.
+ * 
+ * @param string $path The path to append
+ * 
+ * @return string A full path of the view.
+ */
 function view($path){
     return BASE_PATH . 'views/'. $path;
+}
+
+/**
+ * A function that appends a path to the controller's
+ * folder path.
+ * 
+ * @param string $path The path to append
+ * 
+ * @return string A full path of the controller.
+ */
+function controller($path){
+    return BASE_PATH .'controllers/'. $path;
 }
