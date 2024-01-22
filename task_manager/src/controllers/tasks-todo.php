@@ -1,6 +1,6 @@
 <?php
 
-$db_config = require("src/configs/database.php");
+$db_config = require config("database.php");
 
 // A new connection to the database
 $db = new Database($db_config, $db_config['user'], $db_config['password']);
@@ -11,4 +11,4 @@ if(!$tasks){
     abort(404);
 }
 
-require 'src/views/tasks-todo.view.php';
+require view("tasks-todo.view.php");

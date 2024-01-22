@@ -2,12 +2,9 @@
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $db_config = require("src/configs/database.php");
-
-    require("src/validator.php");
+    $db_config = require config("database.php");
 
     $errors = [];
-
 
     if (Validator::string($_POST['title'], 6, 20)) {
         $errors['title'] = 'The title must be betwen 6 and 20 characters long';
@@ -30,4 +27,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-require "src/views/task-create.view.php";
+require view("task-create.view.php");
