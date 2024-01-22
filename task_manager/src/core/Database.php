@@ -1,5 +1,8 @@
 <?php
 
+namespace core;
+
+use PDO;
 /**
  * Database - The Database interface
  */
