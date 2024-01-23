@@ -7,10 +7,6 @@ $db_config = require config("database.php");
 // A new connection to the database
 $db = new Database($db_config, $db_config['user'], $db_config['password']);
 
-$tasks = $db->query('SELECT * FROM tasks')->fetchAll();
+$db->query('DELETE FROM tasks WHERE id =?', [$_POST['id']]);
 
-if(!$tasks){
-    abort(404);
-}
-
-require view("tasks-all.view.php");
+header('location: /tasks');
